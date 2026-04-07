@@ -25,5 +25,9 @@ class Product(
     @CollectionTable(name = "product_attributes", joinColumns = [JoinColumn(name = "product_id")])
     @MapKeyColumn(name = "attribute_key")
     @Column(name = "attribute_value")
-    var attributes: MutableMap<String, String> = mutableMapOf()
+    var attributes: MutableMap<String, String> = mutableMapOf(),
+
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    var category: Category? = null
 )

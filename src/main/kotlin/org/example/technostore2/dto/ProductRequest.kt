@@ -5,5 +5,6 @@ data class ProductRequest(
     val brand: String? = null, // Добавь вопросительный знак
     val price: java.math.BigDecimal? = null,
     val imageUrls: List<String>? = null,
-    val attributes: Map<String, String>? = null
+    val attributes: Map<String, String>? = null,
+    val categoryId: java.util.UUID? = null
 )
